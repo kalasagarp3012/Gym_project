@@ -1,0 +1,9 @@
+com\gym\app\entity\User.class
+com\gym\app\controller\AuthController.class
+com\gym\app\entity\WorkoutPlan.class
+com\gym\app\entity\WorkoutPlan$Level.class
+com\gym\app\service\UserService.class
+com\gym\app\entity\Trainer.class
+com\gym\app\dto\RegisterRequest.class
+com\gym\app\repository\UserRepository.class
+com\gym\app\GymApp.class

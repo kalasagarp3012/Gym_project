@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register — Gym App</title>
+  <link rel="stylesheet" href="register.css" />
+</head>
+<body>
+
+  <div class="card" role="main">
+    <div class="left">
+      <h1>Create Account</h1>
+      <p class="lead">Sign up to access workouts, book trainers, and track progress.</p>
+
+      <form id="registerForm" novalidate>
+        <div class="form-row">
+          <div class="field half">
+            <label for="name">Full name *</label>
+            <input id="name" type="text" required />
+          </div>
+          <div class="field half">
+            <label for="phone">Phone</label>
+            <input id="phone" type="text" />
+          </div>
+        </div>
+
+        <div class="field full">
+          <label for="email">Email *</label>
+          <input id="email" type="email" required />
+        </div>
+
+        <div class="form-row">
+          <div class="field half">
+            <label for="password">Password *</label>
+            <input id="password" type="password" required minlength="6" />
+          </div>
+          <div class="field half">
+            <label for="confirmPassword">Confirm Password *</label>
+            <input id="confirmPassword" type="password" required minlength="6" />
+          </div>
+        </div>
+
+        <div class="field full">
+          <label for="role">Account Type *</label>
+          <select id="role" required>
+            <option value="USER" selected>User</option>
+            <option value="TRAINER">Trainer</option>
+          </select>
+        </div>
+
+        <!-- trainer extra fields (hidden by default) -->
+        <div id="trainerSection" class="trainer-section" style="display:none">
+          <div class="field full">
+            <label for="specialization">Specialization</label>
+            <input id="specialization" type="text" placeholder="e.g. Strength, Yoga, Cardio" />
+          </div>
+
+          <div class="form-row">
+            <div class="field half">
+              <label for="experience">Experience (years)</label>
+              <input id="experience" type="number" min="0" />
+            </div>
+            <div class="field half">
+              <label for="certification">Certification ID</label>
+              <input id="certification" type="text" />
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top:14px; display:flex; gap:12px; align-items:center">
+          <button type="submit" class="primary">Register</button>
+          <div id="spinner" style="display:none; font-size:14px; color:var(--muted)">Sending...</div>
+        </div>
+
+        <div id="successMsg" class="msg success">Registered successfully.</div>
+        <div id="errorMsg" class="msg error">Registration failed.</div>
+
+        <p class="small" style="margin-top:12px">
+  Already have an account? <a href="/frontend/login/login.html">Login</a>
+</p>
+
+      </form>
+    </div>
+
+    <div class="right">
+      <!-- GIF or image — replace with gym.gif in same folder -->
+      <img src="11.gif" alt="Gym animation" />
+    </div>
+  </div>
+
+  <script src="register.js"></script>
+  
+    
+</body>
+</html>
