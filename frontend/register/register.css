@@ -166,3 +166,36 @@ h3 {
       .left,.right{width:100%}
       .right{padding:16px}
     }
+
+    /* NAVBAR STYLES */
+.navbar {
+    width: 100%;
+    padding: 18px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #000428;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: white;
+}
+
+.navbar .links a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.navbar .links a:hover {
+    text-decoration: underline;
+}
